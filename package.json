@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "serve": "node index.js",
-    "dev": "nodemon --exec 'npm run serve'"
+    "dev": "nodemon --exec 'npm run serve'",
+    "start": "NODE_ENV=production node index.js",
+    "build": "npm ci --production"
   },
   "keywords": [
     "pdf",
