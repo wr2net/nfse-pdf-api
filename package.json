@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "node index.js",
     "dev": "nodemon --exec 'npm run serve'",
-    "build": "npm install",
+    "build": "npm ci",
     "dev:netlify": "netlify dev"
   },
   "dependencies": {
