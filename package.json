@@ -5,31 +5,20 @@
   "scripts": {
     "serve": "node index.js",
     "dev": "nodemon --exec 'npm run serve'",
-    "start": "NODE_ENV=production node index.js",
-    "build": "npm ci --production"
+    "build": "npm install",
+    "dev:netlify": "netlify dev"
   },
-  "keywords": [
-    "pdf",
-    "xml",
-    "nf",
-    "nfe",
-    "nfse",
-    "api"
-  ],
-  "author": {
-    "name": "Wagner Rigoli da Rosa",
-    "email": "wagnerr2@gmail.com"
-  },
-  "license": "MIT",
-  "description": "Gerar PDF de NFS-e a partir do XML.",
   "dependencies": {
     "body-parser": "^2.2.0",
     "express": "^5.1.0",
     "node-fetch": "^2.7.0",
     "pdfkit": "^0.17.1",
-    "xml2js": "^0.6.2"
+    "xml2js": "^0.6.2",
+    "@netlify/functions": "^2.0.0",
+    "serverless-http": "^3.2.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "netlify-cli": "^17.0.0"
   }
 }
