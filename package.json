@@ -20,7 +20,7 @@
     "name": "Wagner Rigoli da Rosa",
     "email": "wagnerr2@gmail.com"
   },
-  "license": "ISC",
+  "license": "MIT",
   "description": "Gerar PDF de NFS-e a partir do XML.",
   "dependencies": {
     "body-parser": "^2.2.0",
