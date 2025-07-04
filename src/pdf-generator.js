@@ -1,7 +1,7 @@
-import xml2js from "xml2js";
-import PDFDocument from "pdfkit";
-import fs from "fs";
-import * as path from "node:path";
+const xml2js = require("xml2js");
+const PDFDocument = require("pdfkit");
+const fs = require("fs");
+const path = require("path");
 
 /**
  * Formats a given CNPJ (Cadastro Nacional da Pessoa Jurídica) number string
@@ -100,7 +100,7 @@ async function consultarCEP(cep) {
     return await response.json();
 }
 
-export async function generatePDF(body, res) {
+async function generatePDF(body, res) {
     const xml = body;
     const parser = new xml2js.Parser({ explicitArray: false });
     const result = await parser.parseStringPromise(xml);
@@ -553,3 +553,7 @@ export async function generatePDF(body, res) {
     })
     return pdfBuffer;
 }
+
+module.exports = {
+    generatePDF
+};
