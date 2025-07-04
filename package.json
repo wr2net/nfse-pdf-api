@@ -6,7 +6,8 @@
     "serve": "node index.js",
     "dev": "nodemon --exec 'npm run serve'",
     "build": "npm ci",
-    "dev:netlify": "netlify dev"
+    "dev:netlify": "netlify dev",
+    "deploy": "netlify deploy --prod"
   },
   "dependencies": {
     "body-parser": "^2.2.0",
