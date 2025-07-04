@@ -1,16 +1,18 @@
 [build]
-  command = "npm ci"
-  functions = "netlify/functions"
-  publish = "public"
+command = "npm ci"
+functions = "netlify/functions"
+publish = "public"
 
 [[redirects]]
-  from = "/gerar-pdf"
-  to = "/.netlify/functions/api/gerar-pdf"
-  status = 200
-  force = true
-  methods = ["POST"]
+from = "/gerar-pdf"
+to = "/.netlify/functions/api/gerar-pdf"
+status = 200
+force = true
+methods = ["POST"]
 
 [functions]
-  node_bundler = "esbuild"
-  external_node_modules = ["express", "pdfkit", "xml2js", "node-fetch"]
-  included_files = ["assets/**", "src/**"]
+node_bundler = "esbuild"
+external_node_modules = ["express", "pdfkit", "xml2js", "node-fetch"]
+included_files = ["assets/**", "src/**"]
+[functions.api]
+included_files = ["assets/**", "src/**"]
