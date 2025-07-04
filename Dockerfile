@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Instalar dependências
-RUN npm ci --production
+RUN npm install
 
 # Copiar resto do código
 COPY . .
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Comando para iniciar a aplicação
-CMD ["node", "index.js"]
+CMD ["npm", "run", "dev"]

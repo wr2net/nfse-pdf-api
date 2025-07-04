@@ -4,14 +4,11 @@
   publish = "public"
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/gerar-pdf"
+  to = "/.netlify/functions/api/gerar-pdf"
   status = 200
-
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/api/:splat"
-  status = 200
+  force = true
+  methods = ["POST"]
 
 [functions]
   node_bundler = "esbuild"

@@ -13,12 +13,18 @@ if ! command -v docker &> /dev/null; then
     exit 1
 fi
 
+# Verificar se o Docker Compose está instalado
+if ! command -v docker-compose &> /dev/null; then
+    echo -e "${RED}Docker Compose não está instalado. Por favor, instale o Docker Compose primeiro.${NC}"
+    exit 1
+fi
+
 # Criar diretório para logs se não existir
 mkdir -p logs
 
 # Construir a imagem Docker
 echo -e "${GREEN}Construindo imagem Docker...${NC}"
-docker build -t nfse-pdf-api .
+docker-compose build
 
 if [ $? -eq 0 ]; then
     echo -e "${GREEN}Setup concluído com sucesso!${NC}"
