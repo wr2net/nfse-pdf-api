@@ -12,3 +12,5 @@
 
 [functions]
   node_bundler = "esbuild"
+  external_node_modules = ["express", "pdfkit", "xml2js", "node-fetch"]
+  included_files = ["assets/**", "src/**"]
