@@ -1,11 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NFSe PDF API</title>
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .header {
+            padding: 20px 0;
+            background-color: #6DA55F;
+        }
+        .section {
+            padding: 40px 0;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .card-panel {
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
-<h1>NFSe PDF API</h1>
-<p>Esta é uma API REST. Use os endpoints adequados para gerar PDFs.</p>
+    <!-- Navbar -->
+    <nav class="header">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">NFSe PDF API</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Descrição Principal -->
+        <div class="section">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card-panel">
+                        <h5><i class="material-icons left">description</i>Sobre</h5>
+                        <p>API em Node.js para receber um XML de Nota Fiscal de Serviço Eletrônica (NFSe) e gerar um PDF com os dados da nota.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Como Usar -->
+            <div class="row">
+                <div class="col s12">
+                    <div class="card-panel">
+                        <h5><i class="material-icons left">help_outline</i>Como Usar</h5>
+                        
+                        <div class="section">
+                            <h6>1. Instale as dependências:</h6>
+                            <pre><code>sh setup.sh</code></pre>
+                        </div>
+
+                        <div class="section">
+                            <h6>2. Inicie a API:</h6>
+                            <pre><code>sh run.sh</code></pre>
+                        </div>
+
+                        <div class="section">
+                            <h6>3. Envie o XML via POST:</h6>
+                            <ul class="browser-default">
+                                <li><strong>URL:</strong> https://nf-pdf.fawacom.com.br/gerar-pdf</li>
+                                <li><strong>Método:</strong> POST</li>
+                                <li><strong>Content-Type:</strong> application/xml</li>
+                                <li><strong>Corpo:</strong> Cole o XML da NFSe</li>
+                            </ul>
+
+                            <p>Exemplo usando curl:</p>
+                            <pre><code>curl --location --request POST 'https://nf-pdf.fawacom.com.br/gerar-pdf' \
+--data '<xml></xml>'</code></pre>
+                        </div>
+
+                        <div class="section">
+                            <h6>4. Parar a API:</h6>
+                            <pre><code>sh stop.sh</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Observações -->
+            <div class="row">
+                <div class="col s12">
+                    <div class="card-panel">
+                        <h5><i class="material-icons left">info</i>Observações</h5>
+                        <p>O layout do PDF pode ser customizado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer grey darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="center-align">
+                        <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="NodeJS">
+                        <img src="https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD" alt="Nodemon">
+                        <img src="https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white" alt="NPM">
+                        <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container center-align">
+                © 2025 NFSe PDF API
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
