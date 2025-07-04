@@ -1,12 +1,11 @@
 {
   "name": "nfse-pdf-api",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
-    "serve": "node index.js",
-    "dev": "nodemon --exec 'npm run serve'",
-    "build": "npm ci",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
     "dev:netlify": "netlify dev",
+    "build": "npm ci",
     "deploy": "netlify deploy --prod"
   },
   "dependencies": {
