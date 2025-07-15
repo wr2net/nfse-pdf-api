@@ -100,13 +100,12 @@ async function consultarCEP(cep) {
     return await response.json();
 }
 
-async function generatePDF(body, res) {
-    try {
-        console.log('Iniciando geração do PDF');
-        console.log('XML recebido:', body);
-        const xml = body;
-        const parser = new xml2js.Parser({ explicitArray: false });
+async function generatePDF(body) {
+    console.log('Iniciando geração do PDF');
+    const xml = body;
+    const parser = new xml2js.Parser({ explicitArray: false });
 
+    try {
         console.log('Parseando XML...');
         const result = await parser.parseStringPromise(xml);
         console.log('XML parseado:', JSON.stringify(result, null, 2));
@@ -127,7 +126,7 @@ async function generatePDF(body, res) {
             tomador: tomador?.RazaoSocial
         });
 
-        const pdfBuffer = await new Promise(async (resolve, reject) => {
+        return await new Promise(async (resolve, reject) => {
             try {
                 console.log('Iniciando criação do documento PDF');
                 const doc = new PDFDocument({margin: 20, size: 'A4'});
@@ -579,7 +578,6 @@ async function generatePDF(body, res) {
                 res.status(500).send('Erro ao processar o XML');
             }
         })
-        return pdfBuffer;
     } catch (error) {
         console.error('Erro na função generatePDF:', error);
         throw error;
