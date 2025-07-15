@@ -17,7 +17,7 @@ app.post('/.netlify/functions/api/gerar-pdf', handlePdfGeneration);
 // Handler compartilhado
 async function handlePdfGeneration(req, res) {
     try {
-        const result = await pdfGenerator.generatePDF(req.body, res);
+        const result = await pdfGenerator.generatePDF(req.body);
         res.type('application/pdf').send(result);
     } catch (error) {
         console.error('Erro ao gerar PDF:', error);
