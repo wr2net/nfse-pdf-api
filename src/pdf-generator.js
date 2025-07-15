@@ -108,7 +108,6 @@ async function generatePDF(body) {
     try {
         console.log('Parseando XML...');
         const result = await parser.parseStringPromise(xml);
-        console.log('XML parseado:', JSON.stringify(result, null, 2));
 
         if (!result['CompNfse'] || !result['CompNfse']['Nfse'] || !result['CompNfse']['Nfse']['InfNfse']) {
             throw new Error('Estrutura do XML inválida ou incompleta');
@@ -575,7 +574,7 @@ async function generatePDF(body) {
                 doc.end();
             } catch (err) {
                 console.error(err);
-                res.status(500).send('Erro ao processar o XML');
+                reject.status(500).send('Erro ao processar o XML');
             }
         })
     } catch (error) {
