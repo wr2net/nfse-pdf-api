@@ -6,7 +6,6 @@ services:
       - "3000:3000"
     volumes:
       - .:/app
-      - /app/node_modules
     environment:
-      - NODE_ENV=development
-    command: npm run dev
+      - APP_ENV=development
+    command: php -S 0.0.0.0:3000 -t src

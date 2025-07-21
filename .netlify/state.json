@@ -1,0 +1,20 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Dionísio Cerqueira",
+			"country": {
+				"code": "BR",
+				"name": "Brazil"
+			},
+			"subdivision": {
+				"code": "SC",
+				"name": "Santa Catarina"
+			},
+			"timezone": "America/Sao_Paulo",
+			"latitude": -26.3339,
+			"longitude": -53.5349,
+			"postalCode": "89950"
+		},
+		"timestamp": 1751637867506
+	}
+}

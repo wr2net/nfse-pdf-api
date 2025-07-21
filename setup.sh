@@ -26,6 +26,9 @@ mkdir -p logs
 echo -e "${GREEN}Construindo imagem Docker...${NC}"
 docker-compose build
 
+echo -e "${GREEN}Instalando dependências PHP via Composer...${NC}"
+docker-compose run --rm api composer install
+
 if [ $? -eq 0 ]; then
     echo -e "${GREEN}Setup concluído com sucesso!${NC}"
     echo -e "Use ./run.sh para iniciar a aplicação"
