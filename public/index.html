@@ -42,7 +42,7 @@
                 <div class="col s12">
                     <div class="card-panel">
                         <h5><i class="material-icons left">description</i>Sobre</h5>
-                        <p>API em Node.js para receber um XML de Nota Fiscal de Serviço Eletrônica (NFSe) e gerar um PDF com os dados da nota.</p>
+                        <p>API em PHP para receber um XML de Nota Fiscal de Serviço Eletrônica (NFSe) e gerar um PDF com os dados da nota.</p>
                     </div>
                 </div>
             </div>
@@ -66,14 +66,14 @@
                         <div class="section">
                             <h6>3. Envie o XML via POST:</h6>
                             <ul class="browser-default">
-                                <li><strong>URL:</strong> https://nf-pdf.fawacom.com.br/gerar-pdf</li>
+                                <li><strong>URL:</strong> http://localhost:3000/gerar-pdf</li>
                                 <li><strong>Método:</strong> POST</li>
                                 <li><strong>Content-Type:</strong> application/xml</li>
                                 <li><strong>Corpo:</strong> Cole o XML da NFSe</li>
                             </ul>
 
                             <p>Exemplo usando curl:</p>
-                            <pre><code>curl --location --request POST 'https://nf-pdf.fawacom.com.br/gerar-pdf' \
+                            <pre><code>curl --location --request POST 'http://localhost:3000/gerar-pdf' \
 --data '<xml></xml>'</code></pre>
                         </div>
 

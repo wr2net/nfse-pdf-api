@@ -8,3 +8,7 @@ composer.lock
 
 # Diretórios e arquivos temporários
 logs/
+.idea/
+.jetclient/
+.netlify/
+node_modules/

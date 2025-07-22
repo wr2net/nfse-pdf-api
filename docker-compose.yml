@@ -1,11 +1,12 @@
 version: '3.8'
 services:
-  api:
+  api-php:
     build: .
     ports:
       - "3000:3000"
     volumes:
-      - .:/app
+      - ./src:/app/src
+      - ./logs:/app/logs
     environment:
       - APP_ENV=development
     command: php -S 0.0.0.0:3000 -t src
