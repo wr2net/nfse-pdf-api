@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+<<<<<<< HEAD:nodejs_version/docker-compose.yml
+  api:
+    build: ..
+=======
+  api-php:
+    build: .
+>>>>>>> ef990c8d3eb2ec837e7259392fc8c20f0ad2d436:docker-compose.yml
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/app/src
+      - ./logs:/app/logs
+    environment:
+      - APP_ENV=development
+    command: php -S 0.0.0.0:3000 -t src
