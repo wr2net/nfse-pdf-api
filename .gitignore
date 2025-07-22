@@ -67,7 +67,7 @@ web_modules/
 .yarn-integrity
 
 # dotenv environment variable files
-.env
+php_version/.env
 .env.*
 !.env.example
 
@@ -143,5 +143,7 @@ vite.config.ts.timestamp-*
 .netlify/
 .jetclient/
 nodejs_version/node_modules/
+nodejs_version/logs/
 php_version/vendor/
 php_version/composer.lock
+php_version/logs/

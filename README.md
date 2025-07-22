@@ -11,3 +11,7 @@ API para receber um XML de Nota Fiscal de Serviço Eletrônica (NFSe) e gerar um
 ## Linguagens Disponíveis
  * [NodeJS](nodejs_version/README.md)
  * [PHP 8.3](php_version/README.md)
+
+```bash
+sh bootstrap.sh
+```

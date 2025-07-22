@@ -37,7 +37,7 @@
                       <option name="method" value="POST" />
                       <option name="name" value="Generate" />
                       <option name="sortWeight" value="1000000" />
-                      <option name="url" value="http://localhost:3000/gerar-pdf" />
+                      <option name="url" value="http://0.0.0.0:3000/gerar-pdf" />
                     </requestState>
                   </list>
                 </option>

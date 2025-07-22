@@ -22,6 +22,8 @@ fi
 # Criar diretório para logs se não existir
 mkdir -p logs
 
+cp .env.example .env
+
 # Construir a imagem Docker
 echo -e "${GREEN}Construindo imagem Docker...${NC}"
 docker-compose build

@@ -21,13 +21,13 @@ fi
 
 # Criar diretório para logs se não existir
 mkdir -p logs
-
+cp .env.example .env
 # Construir a imagem Docker
 echo -e "${GREEN}Construindo imagem Docker...${NC}"
 docker-compose build
 
 echo -e "${GREEN}Instalando dependências PHP via Composer...${NC}"
-docker-compose run --rm api composer install
+docker-compose run --rm api-php composer install
 
 if [ $? -eq 0 ]; then
     echo -e "${GREEN}Setup concluído com sucesso!${NC}"

@@ -29,13 +29,8 @@ COPY composer.json ./
 # Instalar dependências PHP com --prefer-dist para melhor performance
 RUN composer install --no-scripts --no-autoloader --prefer-dist
 
-<<<<<<< HEAD:nodejs_version/Dockerfile
-# Copiar resto do código
-COPY .. .
-=======
 # Copiar o resto dos arquivos do projeto
 COPY . .
->>>>>>> ef990c8d3eb2ec837e7259392fc8c20f0ad2d436:Dockerfile
 
 # Gerar autoloader otimizado
 RUN composer dump-autoload --optimize
